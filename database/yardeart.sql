@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 23 Maj 2018, 22:29
+-- Czas generowania: 11 Cze 2018, 20:02
 -- Wersja serwera: 10.1.21-MariaDB
 -- Wersja PHP: 7.1.1
 
@@ -134,9 +134,6 @@ INSERT INTO `answer` (`id_answer`, `letter`, `content`, `fk_question`) VALUES
 (94, 'A', 'Nike zawiązująca sandał', 32),
 (95, 'B', 'Afrodyta z Knidos', 32),
 (96, 'C', 'Nike z Apteros', 32),
-(97, 'A', '', 2),
-(98, 'B', '', 2),
-(99, 'C', '', 2),
 (100, 'A', 'Procesja Panatenajska', 33),
 (101, 'B', 'Partenon na Akropolu ', 33),
 (102, 'C', 'plaskorzezba Echnatona ', 33),
@@ -308,9 +305,6 @@ INSERT INTO `answer` (`id_answer`, `letter`, `content`, `fk_question`) VALUES
 (268, 'A', 'chór katedry w Saint Denis', 89),
 (269, 'B', 'chór katedry Notre Dame', 89),
 (270, 'C', 'chór katedry we Wroclawiu', 89),
-(271, 'A', '', 0),
-(272, 'B', '', 0),
-(273, 'C', '', 0),
 (274, 'A', 'Epitafium Wierzbiety z Branic', 90),
 (275, 'B', 'Oplakiwanie z Chomranic', 90),
 (276, 'C', 'Freski z Asyzu ', 90),
@@ -343,7 +337,55 @@ INSERT INTO `answer` (`id_answer`, `letter`, `content`, `fk_question`) VALUES
 (303, 'C', 'Katedra w Pizie', 99),
 (304, 'A', 'Katedra w Reims', 100),
 (305, 'B', 'Katedra w Mediolanie', 100),
-(306, 'C', 'Katedra z Awinion', 100);
+(306, 'C', 'Katedra z Awinion', 100),
+(307, 'A', 'Katedra w Wells ', 101),
+(308, 'B', 'Katedra we Wroclawiu', 101),
+(309, 'C', 'Katedra w Kolonii', 101),
+(310, 'A', 'Katedra we Wroclawiu', 102),
+(311, 'B', 'Kosciól Mariacki w Gdansku', 102),
+(312, 'C', 'Sainte Chapelle w Paryzu', 102),
+(313, 'A', 'Kosciól Mariacki w Gdansku', 103),
+(314, 'B', 'Wrocławski Ratusz  ', 103),
+(315, 'C', 'Barbakan w Krakowie ', 103),
+(316, 'A', 'Ksściól Mariacki w Gdansku', 104),
+(317, 'B', 'Katedra sw. Wita w Pradze ', 104),
+(318, 'C', 'Kaplica palacowa w Akwizgranie ', 104),
+(319, 'A', 'Madonna z Kruzlowej', 105),
+(320, 'B', 'Piekna Madonna z Wroclawia', 105),
+(321, 'C', 'Pieta z Awinionu', 105),
+(322, 'A', 'Nagrobek Henryka Probusa', 106),
+(323, 'B', 'Nagrobek Kazimierza Wielkiego', 106),
+(324, 'C', 'Nagrobek Kazimierza Jagiellonczyka', 106),
+(325, 'A', 'Nagrobek Kazimierza Wielkiego', 107),
+(326, 'B', 'Nagrobek Henryka Probusa', 107),
+(327, 'C', 'Nagrobek Kazimierza Jagiellonczyka\r\n                                                                               ', 107),
+(328, 'A', 'Nawiedzenia i Zwiastowania z katedry w Reims', 108),
+(329, 'B', 'Cimabue', 108),
+(330, 'C', 'Kolumny z kosciola Norbertanek', 108),
+(331, 'A', 'Nicolo Pisano', 109),
+(332, 'B', 'Piotr Parler', 109),
+(333, 'C', 'Wit Stwosz', 109),
+(334, 'A', 'Wit Stwosz', 110),
+(335, 'B', 'Simone Martini ', 110),
+(336, 'C', 'Nicolo Pisano', 110),
+(337, 'A', 'Oplakiwanie z Chomranic', 111),
+(338, 'B', 'Oplakiwanie z Awinionu', 111),
+(339, 'C', 'Oplakiwanie z z Branic', 111),
+(340, 'A', 'we Florencji', 112),
+(341, 'B', 'w Paryzu', 112),
+(342, 'C', 'w Chartres', 112),
+(376, 'A', 'We Wenecji', 113),
+(377, 'B', 'W Paryzu', 113),
+(378, 'C', 'W Awinion', 113),
+(379, 'A', 'Pieta z Awinionu', 114),
+(380, 'B', 'Pieta z Lubiaza', 114),
+(381, 'C', 'Sw. Anna Samotrzecia', 114),
+(382, 'A', 'Pieta z Lubiaza', 115),
+(383, 'B', 'Pieta z Awinionu', 115),
+(384, 'C', 'Pieta z Kruzlowej', 115),
+(385, 'A', 'Piekna Madonna z Wroclawia', 116),
+(386, 'B', 'Madonna z Kruzlowej', 116),
+(387, 'C', 'Pieta z Awinionu', 116);
 
 -- --------------------------------------------------------
 
@@ -463,7 +505,53 @@ INSERT INTO `question` (`id_question`, `content`, `correct_answer_letter`, `img`
 (97, 'Co jest na obrazku?', 'A', 97, 'sre'),
 (98, 'Co jest na obrazku?', 'A', 98, 'sre'),
 (99, 'Co jest na obrazku?', 'A', 99, 'sre'),
-(100, 'Co jest na obrazku?', 'A', 100, 'sre');
+(100, 'Co jest na obrazku?', 'A', 100, 'sre'),
+(101, 'Co jest na obrazku?', 'A', 101, 'sre'),
+(102, 'Co jest na obrazku?', 'A', 102, 'sre'),
+(103, 'Co jest na obrazku?', 'A', 103, 'sre'),
+(104, 'Co jest na obrazku?', 'A', 104, 'sre'),
+(105, 'Co jest na obrazku?', 'A', 105, 'sre'),
+(106, 'Co jest na obrazku?', 'A', 106, 'sre'),
+(107, 'Co jest na obrazku?', 'A', 107, 'sre'),
+(108, 'Co jest na obrazku?', 'A', 108, 'sre'),
+(109, 'Kto jest autorem?', 'A', 109, 'sre'),
+(110, 'Oltarz Mariacki kto jest autorem?', 'A', 110, 'sre'),
+(111, 'Co jest na obrazku?', 'A', 111, 'sre'),
+(112, 'Gdzie znajduje sie Palazzo Vecchio?', 'A', 112, 'sre'),
+(113, 'Gdzie znajduje sie Palac Dozów?', 'A', 113, 'sre'),
+(114, 'Co znajduje sie na obrazku?', 'A', 114, 'sre'),
+(115, 'Co znajduje sie na obrazku?', 'A', 115, 'sre'),
+(116, 'Co znajduje sie na obrazku?', 'A', 116, 'sre');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `shirt`
+--
+
+CREATE TABLE `shirt` (
+  `id_shirt` int(11) NOT NULL,
+  `content` varchar(250) NOT NULL,
+  `img` varchar(50) NOT NULL,
+  `is_available` int(1) NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `shirt`
+--
+
+INSERT INTO `shirt` (`id_shirt`, `content`, `img`, `is_available`, `price`) VALUES
+(1, 'ta koszulka powstala bo lubudubudubu', 'koszulka', 1, 80),
+(2, 'druga koszulka', 'koszulka1', 1, 90),
+(3, 'awdawdad', 'koszulka2', 1, 70),
+(4, 'cvxbcvb', 'koszulka3', 1, 60),
+(5, 'azfsdfsdfs', 'koszulka', 1, 23),
+(6, 'azfsdfsdfs', 'koszulka', 1, 23),
+(7, 'azfsdfsdfs', 'koszulka', 1, 23),
+(8, 'azfsdfsdfs', 'koszulka', 0, 23),
+(9, 'azfsdfsdfs', 'koszulka', 0, 23),
+(10, 'azfsdfsdfs', 'koszulka', 0, 23);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -483,6 +571,13 @@ ALTER TABLE `question`
   ADD PRIMARY KEY (`id_question`);
 
 --
+-- Indexes for table `shirt`
+--
+ALTER TABLE `shirt`
+  ADD PRIMARY KEY (`id_shirt`),
+  ADD KEY `id_koszulka` (`id_shirt`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -490,12 +585,17 @@ ALTER TABLE `question`
 -- AUTO_INCREMENT dla tabeli `answer`
 --
 ALTER TABLE `answer`
-  MODIFY `id_answer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=307;
+  MODIFY `id_answer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=388;
 --
 -- AUTO_INCREMENT dla tabeli `question`
 --
 ALTER TABLE `question`
-  MODIFY `id_question` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+  MODIFY `id_question` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+--
+-- AUTO_INCREMENT dla tabeli `shirt`
+--
+ALTER TABLE `shirt`
+  MODIFY `id_shirt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
