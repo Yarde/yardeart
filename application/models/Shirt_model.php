@@ -2,10 +2,10 @@
 class Shirt_model extends MY_Model
 {
 
-    public function get_shirt_content($id)
+    public function get_shirt_content($id, $is_available)
     {
         if($id == 0){
-            $query = $this->db->get_where(SHIRT_TABLE, array('is_available' => 1));
+            $query = $this->db->get_where(SHIRT_TABLE, array('is_available' => $is_available));
         }else{
             $query = $this->db->get_where(SHIRT_TABLE, array('id_shirt' => $id));
         }

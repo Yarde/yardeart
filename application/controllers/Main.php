@@ -7,7 +7,7 @@ class Main extends MY_Controller {
 	{
 		$this->load->model('Quiz_model');
 		$this->load->model('Shirt_model');
-		$shirt_content = $this->Shirt_model->get_shirt_content(0);
+		$shirt_content = $this->Shirt_model->get_shirt_content(0, TRUE);
 		$view['content'] = $this->loadContent('Main', ['shirt_content' => $shirt_content]);
         $view['mainNav'] = $this->loadMainNav();
 		$this->showMainView($view);   
