@@ -1,4 +1,4 @@
-var baseUrl = "http://localhost/ola/";
+var baseUrl = "http://localhost/yardeart/";
 /*
 |--------------------------------------------------------------------------
 | Navbar
@@ -19,13 +19,7 @@ function initialize_quiz_form() {
 	$(document).on("click", ".next", function nextQuestion() {
 		let question = $(this).parent();
 		let id = question.attr('id');
-		
-		$("input[name=id]").each(function(){
-			alert($("input[name=id]").val());
-			if(val == "A"){
-				$("input[name=id]").next($("div.border").addClass("correct"));
-			}
-		});
+		$("input[value=A][name="+id+"]").parent().find("div.border").addClass("correct");
 
 		setTimeout(function(){
 			if(is_checked_question(question))
@@ -37,7 +31,7 @@ function initialize_quiz_form() {
 			else {
 				showResponse("Trzeba cos zaznaczyc!")
 			}
-		}, 1000);
+		}, 2000);
 
 	});
 	
@@ -117,6 +111,31 @@ $(document).on("click", ".close-setting", function openSetting(){
 	
 	
 });
+/*
+|--------------------------------------------------------------------------
+| Sizing images
+|--------------------------------------------------------------------------
+|
+*/
+let isSized;
+$(document).on("click", ".sizeable", function sizeImage(){
+	$('.blur').show();
+	let src = $(this).attr("src");
+	isSized = 1;
+	$("body").append('<img src="'+src+'" class="full"/>');
+});
+
+$(document).on("click", ".blur", function sizeImage(){
+	if(isSized){
+		$('.blur').hide();
+		$('.full').remove();
+		isSized = 0;
+	}
+	
+	
+});
+
+
 
 /*
 |--------------------------------------------------------------------------
