@@ -21,17 +21,17 @@ function initialize_quiz_form() {
 		let id = question.attr('id');
 		$("input[value=A][name="+id+"]").parent().find("div.border").addClass("correct");
 
-		setTimeout(function(){
 			if(is_checked_question(question))
 			{
-				question.addClass('hidden');
-				question.next().removeClass('hidden');
+				setTimeout(function(){
+					question.addClass('hidden');
+					question.next().removeClass('hidden');
+				}, 2000);
 
 			}
 			else {
 				showResponse("Trzeba cos zaznaczyc!")
 			}
-		}, 2000);
 
 	});
 	
@@ -118,24 +118,21 @@ $(document).on("click", ".close-setting", function openSetting(){
 |
 */
 let isSized;
-$(document).on("click", ".sizeable", function sizeImage(){
-	$('.blur').show();
-	let src = $(this).attr("src");
-	isSized = 1;
-	$("body").append('<img src="'+src+'" class="full"/>');
-});
 
-$(document).on("click", ".blur", function sizeImage(){
+$(document).on("click", function unsizeImage(){
 	if(isSized){
 		$('.blur').hide();
 		$('.full').remove();
 		isSized = 0;
 	}
-	
-	
 });
 
-
+$(document).on("click", ".sizeable", function sizeImage(){
+	$('.blur').show();
+	let src = $(this).attr("src");
+	setTimeout(()=>{isSized = 1},1);
+	$("body").append('<img src="'+src+'" class="full"/>');
+});
 
 /*
 |--------------------------------------------------------------------------

@@ -9,7 +9,6 @@
 }
 
 @import 'mini-reset';
-//@import 'bootstrap-theme.min';
 @import 'bootstrap';
 
 html {
@@ -29,6 +28,7 @@ html {
         font-family: "Code 7x5 Regular", Consolas, Helvetica, Arial, sans-serif;
         text-transform: uppercase;
         color:#E3E3E3;
+        padding-bottom: 90px;
 
         .full{
            position: fixed;
@@ -314,8 +314,8 @@ html {
                 display: flex;
                 margin-bottom: 50px;
                 border: solid #1C1B25 6px;
-                padding: 5px;
                 float: left;
+                padding: 5px;
                 margin-left: 15%;
                 transition: .3s;
             }
@@ -325,60 +325,64 @@ html {
                 border: solid #1C1B25 6px;
                 padding: 5px;
                 float: right;
-                margin-right: 15%;
-
-            }
-
-            @media only screen and (max-width: 1000px) {
-                .left{
-                    float: left;
-                    margin-left: 30%;
-                    margin-right: 15%;
-                }
-                .right{
-                    float: left;
-                    margin-left: 30%;
-                    margin-right: 15%;
-                }
-            }
-        
-            @media only screen and (max-width: 500px) {
-                .left{
-                    float: left;
-                    margin-left: 15%;
-                    margin-right: 15%;
-                }
-                .right{
-                    float: left;
-                    margin-left: 15%;
-                    margin-right: 15%;
-                }
-            }
-        
-            .left:hover{
-                border: solid #5F5F5F 6px;
-
-            }
-            .right:hover{
-                border: solid #5F5F5F 6px;
-
-            }
-        
-            .shirt_img{
-                width: 240px;
-                height: 350px;
-                transform: scale(1);
+                margin-left: 15%;
                 transition: .3s;
             }
-            .shirt_img:hover{
-	            transform: scale(1.04);
+            .img_container{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                &:after{
+                    content: "";
+                    width: 500px;
+                }
+                // margin-bottom: 90px;
+                }
             }
 
+            // .shirt_img{
+            //     width: 240px;
+            //     height: 350px;
+            //     transform: scale(1);
+            //     transition: .3s;
+            // }
+            // .shirt_img:hover{
+	        //     transform: scale(1.04);
+            // }
+
+                .img_box{
+                    width: 500px;
+                    margin-bottom: 50px;
+                    > .border {
+                        display: block;
+                        border: solid #1C1B25 6px;
+                        width: 240px;
+                        height: 350px;
+                        margin: 0 auto;
+                        box-sizing: content-box;
+                        &:hover{
+                            border: solid #5F5F5F 6px;
+                        }
+
+                    }
+                        img {
+                            display: block;
+                            width: 240px;
+                            height: 350px;
+                            transform: scale(0.94);
+                            &:hover{
+                                transform: scale(1);
+                                transition: 0.3s;
+                            }
+
+
+                        }
+        }
             .shirt_content{
-                margin-left: 50%;
+                // margin-left: 50%;
+                padding: 0 15px;
                 text-align: left;
             }
-        }
     }
     
 
