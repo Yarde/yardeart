@@ -334,24 +334,11 @@ html {
                 justify-content: center;
                 &:after{
                     content: "";
-                    width: 500px;
+                    width: 40%;
                 }
-                // margin-bottom: 90px;
-                }
-            }
-
-            // .shirt_img{
-            //     width: 240px;
-            //     height: 350px;
-            //     transform: scale(1);
-            //     transition: .3s;
-            // }
-            // .shirt_img:hover{
-	        //     transform: scale(1.04);
-            // }
 
                 .img_box{
-                    width: 500px;
+                    width: 40%;
                     margin-bottom: 50px;
                     > .border {
                         display: block;
@@ -376,13 +363,22 @@ html {
                             }
 
 
-                        }
-        }
+                    }
+                }
+                @media only screen and (max-width: 1000px) {
+                    &:after{
+                        content: "";
+                        width: 100%;
+                    }
+                    .img_box{
+                        width: 100%;
+                    }
+                }
+            }
             .shirt_content{
-                // margin-left: 50%;
                 padding: 0 15px;
                 text-align: left;
             }
     }
     
-
+}
