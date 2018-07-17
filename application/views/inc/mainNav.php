@@ -10,10 +10,16 @@
             <a target="_self" href="<?= site_url("Quiz")?>">Quiz</a>
         </div>
         </div>
-        <?php if(current_url() == base_url('Quiz')): ?>
-            <div class="settings">
+        <div class="settings">
+            <a href="<?= base_url('index.php?lang=pl')?>"> 
+                <img class="language_pl" src="<?= base_url('public/image/pl.png')?>" alt="Polski">
+            </a>
+            <a href="<?= base_url('index.php?lang=en')?>"> 
+                <img class="language_en" src="<?= base_url('public/image/en.png')?>" alt="English">
+            </a>
+            <?php if(current_url() == base_url('Quiz')): ?>
                 <img class="setting-img" src="<?= base_url('public/image/setting.png')?>" alt="Ustawienia">
-            </div>    
-    <?php endif; ?>
+            <?php endif; ?>
+        </div>
     </div>
 </nav>

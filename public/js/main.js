@@ -45,7 +45,7 @@ function initialize_quiz_form() {
 }
 function sendPostDataOnSubmit(handler, url, refresh = false) {
 
-	$(document).on("submit", handler, function(e) { //$(document) na początku żeby działało dla dynamicznych elementów
+	$(document).on("submit", handler, function(e) { //$(document) na poczatku żeby dzialalo dla dynamicznych elementów
 		e.preventDefault();
 		var data = $(this).serialize();
 		sendPostData(data, url);
@@ -79,7 +79,7 @@ $(document).on("submit", '.quiz_form', function(e) {
 			
 		},
 		error: function() {
-			showResponse('Błąd związany z wysyłaniem danych.<br>Sprawdź swoje połączenie internetowe.');
+			showResponse('Blad zwiazany z wysylaniem danych.<br>Sprawdz swoje polaczenie internetowe.');
 		}
 	});
 });
@@ -103,7 +103,7 @@ $(document).on("click", ".close-setting", function openSetting(){
 			$(".content").html(serverResponse);
 		},
 		error: function() {
-			showResponse('Błąd związany z wysyłaniem danych.<br>Sprawdź swoje połączenie internetowe.');
+			showResponse('Blad zwiazany z wysylaniem danych.<br>Sprawdz swoje polaczenie internetowe.');
 		}
 	});
 
@@ -111,6 +111,7 @@ $(document).on("click", ".close-setting", function openSetting(){
 	
 	
 });
+
 /*
 |--------------------------------------------------------------------------
 | Sizing images
@@ -161,7 +162,7 @@ function sendPostData(data, url) {
 			showResponse(serverResponse, refresh);
 		},
 		error: function() {
-			showResponse('Błąd związany z wysyłaniem danych.<br>Sprawdź swoje połączenie internetowe.');
+			showResponse('Blad zwiazany z wysylaniem danych.<br>Sprawdz swoje polaczenie internetowe.');
 		}
 	});
 }
@@ -170,7 +171,7 @@ function sendPostData(data, url) {
 
 function sendPostDataOnSubmit(handler, url, refresh = false) {
 
-	$(document).on("submit", handler, function(e) { //$(document) na początku żeby działało dla dynamicznych elementów
+	$(document).on("submit", handler, function(e) { //$(document) na poczatku żeby dzialalo dla dynamicznych elementów
 		e.preventDefault();
 		var data = $(this).serialize();
 		sendPostData(data, url);

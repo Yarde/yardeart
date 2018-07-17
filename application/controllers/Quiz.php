@@ -43,7 +43,6 @@ class Quiz extends MY_Controller {
 
     public function setting()
 	{
-        $this->load->library('session');
         $this->load->model('Questions_model');
         $this->load->model('Quiz_model');
         $epoka = @$_POST['epoka']?:0; 

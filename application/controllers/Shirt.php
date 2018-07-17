@@ -3,17 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Shirt extends MY_Controller {
 
-	// public function index()
-	// {
-	// 	$id_shirt = $_GET['id'] ?: 1;
-	// 	$this->load->model('Shirt_model');
-	// 	$shirt_content = $this->Shirt_model->get_shirt_content($id_shirt, TRUE);
-	// 	$view['content'] = $this->loadContent('Shirt', ['shirt_content' => $shirt_content]);
-    //     $view['mainNav'] = $this->loadMainNav();
-	// 	$this->showMainView($view);   
-	// }
 	public function index()
 	{
+		$this->load->library('session');
+		if(isset($_GET['lang'])) $_SESSION['lang'] = $_GET['lang'];
+		if(!isset($_SESSION['lang'])) $_SESSION['lang']="pl";
 		$this->showShirtContent(0, TRUE);
 	}
 	public function shirtIndex()
@@ -23,7 +17,12 @@ class Shirt extends MY_Controller {
 	}
 	public function galleryIndex()
 	{
-		$info = "<p style='text-align: center;'>Galeria sprzedanych koszulek</p>";
+		if($_SESSION['lang']=="en"){
+			$info = "<p style='text-align: center;'>Gallery of sold shirts</p>";
+		}else{
+			$info = "<p style='text-align: center;'>Galeria sprzedanych koszulek</p>";
+		}
+
         $id_shirt = isset($_GET['id']) ? $_GET['id'] : 0;
 		$this->showShirtContent($id_shirt, FALSE, 'Main', $info);		
 	}

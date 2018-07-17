@@ -33,7 +33,7 @@
 		</div>
 		<div class="option">
 			<label>
-				<input type="radio" name="epoka" value="wsp">
+				<input type="radio" name="epoka" value="wsp" disabled>
 				Wspólczesnosc
 				<div class="border"></div>
 			</label>
@@ -43,6 +43,9 @@
 </div>
 <?php $questions = $quiz_content['questions']; ?>
 <?php shuffle($questions); ?>
+<?php if($_SESSION['lang']=="en"){?>
+	<?php echo  "<h4 style='text-align: center;'>quiz does not support english";?>
+<?php }?>
 <div class="container">
 <form class="quiz_form col-lg-10 col-lg-offset-1 col-md-12
 				col-sm-12  col-sx-12" action="" method="post">
