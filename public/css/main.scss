@@ -1,9 +1,9 @@
 @font-face {
     font-family:"Code 7x5 Regular";
-    src:url(/yardeart/public/fonts/Code_7x5.eot?) format("eot"),
-    url(/yardeart/public/fonts/Code_7x5.woff) format("woff"),
-    url(/yardeart/public/fonts/Code_7x5.ttf) format("truetype"),
-    url(/yardeart/public/fonts/Code_7x5.svg#Code-7x5) format("svg");
+    src:url(../fonts/Code_7x5.eot?) format("eot"),
+    url(../fonts/Code_7x5.woff) format("woff"),
+    url(../fonts/Code_7x5.ttf) format("truetype"),
+    url(../fonts/Code_7x5.svg#Code-7x5) format("svg");
     font-weight:normal;
     font-style:normal;
 }
@@ -61,7 +61,7 @@ html {
             right: 0;
             height: 128px;
             width: 100%;
-            background-image: url(/yardeart/public/image/fade.png);
+            background-image: url(../image/fade.png);
             background-repeat: repeat-x;
             overflow: hidden;
             pointer-events: none;
@@ -74,6 +74,8 @@ html {
 
         .name{
             color: #FFF;
+            font-size: 24px;
+            margin-left: 35px;
         } 
 
         .name:hover{
@@ -96,9 +98,12 @@ html {
         }
 
         .logo{
-            padding: 2px;
-            padding-bottom: 5px;
-            padding-right: 5px;
+            background: url(../image/logobn.png) no-repeat;
+            display: block;
+        }
+
+        .logo:hover{
+            background: url(../image/logoh.png) no-repeat;
         }
 
         .response {

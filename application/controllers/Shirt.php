@@ -5,7 +5,7 @@ class Shirt extends MY_Controller {
 
 	public function index()
 	{
-		$this->load->library('session');
+		//$this->load->library('session');
 		if(isset($_GET['lang'])) $_SESSION['lang'] = $_GET['lang'];
 		if(!isset($_SESSION['lang'])) $_SESSION['lang']="pl";
 		$this->showShirtContent(0, TRUE);

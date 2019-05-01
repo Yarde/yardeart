@@ -1,4 +1,4 @@
-var baseUrl = "http://localhost/yardeart/";
+var baseUrl = "http://yardeart.pl/";
 /*
 |--------------------------------------------------------------------------
 | Navbar
@@ -19,10 +19,11 @@ function initialize_quiz_form() {
 	$(document).on("click", ".next", function nextQuestion() {
 		let question = $(this).parent();
 		let id = question.attr('id');
-		$("input[value=A][name="+id+"]").parent().find("div.border").addClass("correct");
+		
 
 			if(is_checked_question(question))
 			{
+				$("input[value=A][name="+id+"]").parent().find("div.border").addClass("correct");
 				setTimeout(function(){
 					question.addClass('hidden');
 					question.next().removeClass('hidden');

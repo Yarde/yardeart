@@ -3,10 +3,13 @@
     <div class="header">
         <div>
         <div class="brand">
-            <a href="<?= base_url()?>" rel="nofollow" target="_self"><img class="logo" src="<?= base_url('public/image/logo.png')?>" alt="Logo"><span class="name">Yardeart</span></a>
+            <a href="<?= base_url()?>" class="logo" rel="nofollow" target="_self"><span class="name">Yardeart</span></a>
         </div>
         <div class="links">
+			<a target="_blank" href="https://www.instagram.com/yardeart/">Insta</a>
+			▪
             <a target="_self" href="<?= site_url("Gallery")?>">Gallery</a>
+			▪
             <a target="_self" href="<?= site_url("Quiz")?>">Quiz</a>
         </div>
         </div>

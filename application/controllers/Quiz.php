@@ -10,27 +10,17 @@ class Quiz extends MY_Controller {
             $this->load->model('Questions_model');
             
             $question_ids = $this->Questions_model->get_question_ids();
-            $number_of_questions = count($question_ids);
-            if($number_of_questions>20){
-                $number_of_questions = 20;
-            }
+            $number_of_questions = 20;
             $wynik = 0;
             foreach ($question_ids as $id_question) {
-                $post_answer = $this->input->post('question_'.$id_question);
+                $post_answer = $this->input->post($id_question);
                 $correct_answer_letter = $this->Questions_model->get_correct_answer_letter($id_question);
 
                 if ($post_answer == $correct_answer_letter) {
-                    ++$wynik;
-                    
+                    ++$wynik;  
                 }
             }
             $srednia = ($wynik / $number_of_questions * 100);
-            $id_user = 1;
-            $user_kurs_data = [
-              'id_user' => $id_user,
-              'result' => $srednia,
-            ];
-
             echo '<h2>Ukonczyles quiz</h2><br>';
             echo 'Twój wynik to: ';
             echo $srednia;

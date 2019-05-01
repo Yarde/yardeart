@@ -52,7 +52,7 @@
 <?php $last = count($questions)-1; ?>
 <?php	foreach ($questions as $key=>$question): ?>
 <?php	shuffle_assoc($question->answers) ?>
-	<div class="question<?= ($key==0) ? '' : ' hidden' ?>" id="<?= $question->id_question ?>">
+	<div class="question question_<?=$question->id_question?> <?= ($key==0) ? '' : ' hidden' ?>" id="<?= $question->id_question ?>">
 		<img src="<?= base_url('public/image/quiz/').$question->img.".jpg"?>" class="img col-lg-8  col-md-10 
 				col-sm-10 col-sx-10 " alt="zdjecie do pytania"><br/>
 			<p class="question_content"><?= $question->content ?></p>
